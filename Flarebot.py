@@ -84,11 +84,11 @@ while 1:
     ircmsg = ircmsg.strip('\n\r') # removing any unnecessary linebreaks.
     print(ircmsg) # Here we print what's coming from the server
     if "this nickname is registered" in ircmsg.lower():
-        sendmsg(channel, '/msg NickServ IDENTIFY krustydood')
+        sendmsg(channel, '/msg NickServ IDENTIFY xxxxxxxx')
     if "you have not registered" in ircmsg.lower():
-        sendmsg(channel, '/msg NickServ IDENTIFY krustydood')
+        sendmsg(channel, '/msg NickServ IDENTIFY xxxxxxxx')
     if "nickname is already in use" in ircmsg.lower():
-        sendmsg(channel, '/msg NickServ GHOST Flarebot krustydood')
+        sendmsg(channel, '/msg NickServ GHOST Flarebot xxxxxxx')
     if ircmsg.find("PING :") != -1:
         ping()
     
